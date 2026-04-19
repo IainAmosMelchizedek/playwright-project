@@ -1,4 +1,4 @@
-\# Playwright Website Monitor
+# Playwright Website Monitor
 
 
 
@@ -40,7 +40,7 @@ It is currently configured to test these pages for `https://safepassagestrategie
 
 
 
-\## Why this exists
+## Why this exists
 
 
 
@@ -58,7 +58,7 @@ A live website can appear to work in one browser and fail silently in another. T
 
 
 
-\## Current test behavior
+## Current test behavior
 
 
 
@@ -90,7 +90,7 @@ The GitHub Actions workflow runs:
 
 
 
-\## Repository structure
+## Repository structure
 
 
 
@@ -102,11 +102,11 @@ The GitHub Actions workflow runs:
 
 
 
-\## Local setup
+## Local setup
 
 
 
-\### 1. Clone the repository
+### 1. Clone the repository
 
 ```bash
 
@@ -118,7 +118,7 @@ cd playwright-project
 
 
 
-\### 2. Install dependencies
+### 2. Install dependencies
 
 ```bash
 
@@ -130,7 +130,7 @@ npx playwright install --with-deps
 
 
 
-\### 3. Run the tests locally
+### 3. Run the tests locally
 
 ```bash
 
@@ -140,7 +140,7 @@ npx playwright test
 
 
 
-\### 4. Open the local report
+### 4. Open the local report
 
 ```bash
 
@@ -150,7 +150,7 @@ npx playwright show-report
 
 
 
-\## How to adapt this for your own website
+## How to adapt this for your own website
 
 
 
@@ -158,7 +158,7 @@ Edit `tests/example.spec.js` and replace the page list with your own pages.
 
 
 
-\## Example: newsletter signup monitoring
+## Example: newsletter signup monitoring
 
 
 
@@ -172,7 +172,7 @@ Playwright can:
 
 
 
-\## GitHub Actions automation
+## GitHub Actions automation
 
 
 
@@ -180,7 +180,7 @@ Runs automatically on schedule and on demand.
 
 
 
-\## Alerts
+## Alerts
 
 
 
@@ -188,7 +188,7 @@ GitHub can send email notifications for failed workflows.
 
 
 
-\## Who this is for
+## Who this is for
 
 
 
@@ -200,7 +200,7 @@ GitHub can send email notifications for failed workflows.
 
 
 
-\## License / reuse
+## License / reuse
 
 
 
