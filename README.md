@@ -10,7 +10,7 @@ This repository uses Playwright + GitHub Actions to test a live website on an ho
 
 
 
-\## What this project does
+## What this project does
 
 
 
