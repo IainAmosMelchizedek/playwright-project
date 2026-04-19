@@ -1,19 +1,19 @@
-// @ts-check
 import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+const pages = [
+  { name: 'Home', url: 'https://safepassagestrategies.com/' },
+  { name: 'Services', url: 'https://safepassagestrategies.com/services/' },
+  { name: 'What We Build', url: 'https://safepassagestrategies.com/what-we-build/' },
+  { name: 'Contact', url: 'https://safepassagestrategies.com/contact/' },
+];
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
+for (const pageInfo of pages) {
+  test(`${pageInfo.name} loads and shows a visible h1`, async ({ page }) => {
+    await page.goto(pageInfo.url, { waitUntil: 'domcontentloaded' });
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+    await expect(page).toHaveTitle(/.+/);
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-});
+    const heading = page.locator('h1').first();
+    await expect(heading).toBeVisible();
+  });
+}
